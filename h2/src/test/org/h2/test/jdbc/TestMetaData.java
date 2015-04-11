@@ -1019,6 +1019,9 @@ public class TestMetaData extends TestBase {
 
         rs = meta.getTableTypes();
         rs.next();
+        
+        assertEquals("EXTERNAL", rs.getString("TABLE_TYPE"));
+        assertFalse(rs.next());        
         assertEquals("SYSTEM TABLE", rs.getString("TABLE_TYPE"));
         rs.next();
         assertEquals("TABLE", rs.getString("TABLE_TYPE"));
@@ -1027,6 +1030,8 @@ public class TestMetaData extends TestBase {
         rs.next();
         assertEquals("VIEW", rs.getString("TABLE_TYPE"));
         assertFalse(rs.next());
+        
+        
 
         rs = meta.getTables(null, Constants.SCHEMA_MAIN,
                 null, new String[] { "TABLE" });
