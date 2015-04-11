@@ -769,8 +769,8 @@ public class JdbcDatabaseMetaData extends TraceObject implements
     }
 
     /**
-     * Gets the list of table types. This call returns a result set with three
-     * records: "SYSTEM TABLE", "TABLE", "and "VIEW".
+     * Gets the list of table types. This call returns a result set with five
+     * records: "SYSTEM TABLE", "TABLE", "VIEW", "TABLE LINK" and "EXTERNAL".
      * The result set is sorted by TABLE_TYPE.
      *
      * <ul>
@@ -3131,7 +3131,7 @@ public class JdbcDatabaseMetaData extends TraceObject implements
     /**
      * [Not supported]
      */
-    /*## Java 1.7 ##
+    //## Java 1.7 ##
     @Override
     public boolean generatedKeyAlwaysReturned() {
         return true;
@@ -3149,7 +3149,7 @@ public class JdbcDatabaseMetaData extends TraceObject implements
      * @param columnNamePattern null (to get all objects) or a column name
      *            (uppercase for unquoted names)
      */
-    /*## Java 1.7 ##
+    //## Java 1.7 ##
     @Override
     public ResultSet getPseudoColumns(String catalog, String schemaPattern,
             String tableNamePattern, String columnNamePattern) {
