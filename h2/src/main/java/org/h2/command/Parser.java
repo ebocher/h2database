@@ -4215,7 +4215,6 @@ public class Parser {
                     throw getSyntaxError();
                 }
                 if (readIf("BTREE")) {
-                    System.out.println("FOUND BTREE");
                 } else if (readIf("RTREE")) {
                     spatial = true;
                 } else if (readIf("HASH")) {
